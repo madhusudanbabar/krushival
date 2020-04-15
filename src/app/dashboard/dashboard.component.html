@@ -1,0 +1,15 @@
+<script src="js/charts.js" charset="utf-8"></script>
+<div class="container">
+    <div class="pie" id="piechart" style="width: 900px; height: 500px;"></div>
+    <div class="bar" id="columnchart_material" style="width: 900px; height: 500px;"></div>
+    <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
+</div>
+<google-chart
+   [title]="title"
+   [type]="type"
+   [data]="data"
+   [columnNames]="columnNames"
+   [options]="options"
+   [width]="width"
+   [height]="height">
+</google-chart>

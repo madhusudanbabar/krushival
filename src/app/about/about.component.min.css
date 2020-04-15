@@ -1,0 +1,13 @@
+.background img {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: translateY(-20px);
+}
+
+.about-content {
+  margin: 100px 10px 0px 10px;
+  word-wrap: normal;
+}
+
+/*# sourceMappingURL=about.component.min.css.map */
