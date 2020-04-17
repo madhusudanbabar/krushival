@@ -19,7 +19,7 @@ export class AuthService {
 
   login() {
     this.af.signInWithPopup(new auth.GoogleAuthProvider()).then(success=>{
-      localStorage.setItem("user", this.userData.displayName);
+      localStorage.setItem("user", this.userData.displayName);  
     }).catch(err=>{
       console.log(9);
     });
