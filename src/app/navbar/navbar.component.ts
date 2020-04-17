@@ -9,9 +9,11 @@ import { AuthService } from '../shared/services/auth.service';
 export class NavbarComponent implements OnInit {
 
   name: string;
-  constructor(public tbd: AuthService) { this.name = tbd.userData }
+  constructor(public tbd: AuthService) { }
 
   ngOnInit() {
+    this.tbd.getUser();
+    this.name = this.tbd.userData.displayName? this.tbd.userData.displayName : "profile"
     // this.name = AuthService.userData;
   }
 }
