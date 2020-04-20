@@ -16,7 +16,7 @@
         <ul class="navbar-nav ml-auto">
             <li *ngIf="(loginStatus | async )"><a *ngIf="(name | async ) as name " id="username" class="nav-item nav-link " routerLink="profile"><span  class="glyphicon glyphicon-user"></span> {{ name | lowercase }}  </a></li>
             <li *ngIf="!(loginStatus | async ) else showLogin"><a id="sign" class="nav-item nav-link "><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-            <ng-template  #showLogin ><li><a id="sign" class="nav-item nav-link " routerLink="register" (click)="login()"><span class="glyphicon glyphicon-log-in"></span> Login</a></li></ng-template>
+            <ng-template  #showLogin ><li><a id="sign" class="nav-item nav-link " routerLink="register"><span class="glyphicon glyphicon-log-in"></span> Login</a></li></ng-template>
         </ul>
     </div>
 </nav>
