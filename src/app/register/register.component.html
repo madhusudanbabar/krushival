@@ -1,5 +1,5 @@
-<div *ngIf="user | async as user; else showLogin">
-      <h1>Hello {{ user.displayName }}!</h1>
+<div *ngIf="this.af.user | async ; else showLogin">
+      <h1>Hello {{ this.name  }}!</h1>
       <button (click)="this.af.logout()">Logout</button>
   </div>
   <ng-template #showLogin>

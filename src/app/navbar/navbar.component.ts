@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../shared/services/auth.service';
+import { User } from 'firebase';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -8,12 +10,15 @@ import { AuthService } from '../shared/services/auth.service';
 })
 export class NavbarComponent implements OnInit {
 
-  name: string;
-  constructor(public tbd: AuthService) { }
+  loginStatus: Observable<boolean>;
+  name: Observable<string>;
+  constructor(public af: AuthService) {
+
+  }
+
 
   ngOnInit() {
-    this.tbd.getUser();
-    this.name = this.tbd.userData.displayName? this.tbd.userData.displayName : "profile"
-    // this.name = AuthService.userData;
-  }
+    this.loginStatus = this.af.loginStatus;
+    this.name = this.af.name;
+    }
 }
